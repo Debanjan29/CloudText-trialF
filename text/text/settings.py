@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
+import os
 
 from pathlib import Path
 import dj_database_url
@@ -98,6 +99,7 @@ DATABASES = {
 database_url=os.environ.get("DATABASE_URL")
 
 #DATABASES["default"]=dj_database_url.parse("postgres://cloudtextdb_user:M93Ny4dxR9mCFKsF4CpsfwPxBty6NpoW@dpg-cjlfcq8cfp5c738g2u00-a.oregon-postgres.render.com/cloudtextdb")
+
 DATABASES["default"]=dj_database_url.parse(database_url)
 
 # postgres://cloudtextdb_user:M93Ny4dxR9mCFKsF4CpsfwPxBty6NpoW@dpg-cjlfcq8cfp5c738g2u00-a.oregon-postgres.render.com/cloudtextdb
