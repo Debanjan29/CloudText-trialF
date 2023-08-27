@@ -6,6 +6,8 @@ class Store(models.Model):
     msg=models.TextField()
     id=models.TextField(max_length=5,primary_key=True)
     date=models.DateTimeField(default=now)
+
+    
     ordering = ['date']
 
     class Meta:
